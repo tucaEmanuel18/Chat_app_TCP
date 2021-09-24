@@ -10,7 +10,7 @@
 
 #define PORT 2021
 
-extern int errno;
+#define errno (*__errno_location ())
 
 int main(){
     struct sockaddr_in server; // structura folosita de server
@@ -52,7 +52,7 @@ int main(){
     // servim in mod iterativ clientii
     while(1){
         int client;
-        int length = sizeof(from);
+        unsigned int length = sizeof(from);
 
         printf("[SERVER] Asteptam la portul %d ... \n", PORT);
         fflush(stdout);
