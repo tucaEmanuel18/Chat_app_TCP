@@ -57,7 +57,7 @@ int main(){
         printf("[SERVER] Asteptam la portul %d ... \n", PORT);
         fflush(stdout);
 
-        // accepta un client (stare clocanta pana la realizarea conexiunii) */
+        // accepta un client (stare blocanta pana la realizarea conexiunii) */
         client = accept(sd, (struct sockaddr * ) &from, &length);
 
         // eroare la acceptarea conexiunii de la un client
