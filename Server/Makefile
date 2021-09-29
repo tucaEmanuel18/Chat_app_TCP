@@ -12,8 +12,8 @@
 
 # tcp_utils.o: tcp_utils.cpp
 # 	g++ -c tcp_utils.cpp
-HEADERS=abstract_server.h chat_server.h tcp_utils.h
-SOURCES=server.cpp abstract_server.cpp chat_server.cpp tcp_utils.cpp
+HEADERS=abstract_server.h chat_server.h ../tcp_utils.h
+SOURCES=server.cpp abstract_server.cpp chat_server.cpp ../tcp_utils.cpp
 
 server: ${SOURCES} ${HEADERS}
 	g++ -pthread -std=c++11 ${SOURCES} -o server

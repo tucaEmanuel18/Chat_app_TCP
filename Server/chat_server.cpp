@@ -14,7 +14,7 @@ void Chat_Server::handle_connection(int client){
     fflush(stdout);
 
     string msg = TCP_utils::receive(client);
-    printf("%s The message received: %s", prefix.c_str(), msg);
+    printf("%s The received message: %s", prefix.c_str(), msg.c_str());
 
     // the connection should be closed
 
